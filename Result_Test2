@@ -1,0 +1,79 @@
+//Soal No 1 (Narcissistic)
+<?php
+$sum = 0;
+$input = "153";
+
+$lengt = strlen($input);
+
+for ($x = 0; $x < $lengt; $x++) {
+   $sum = $sum + pow($input[$x],$lengt);   
+}
+
+$inputAngka = (int)$input;
+
+if($inputAngka == $sum){
+	echo True;
+}
+else{
+	echo False;
+}
+?> 
+
+//Soal No 2 (odd integer)
+<?php
+$bil = array("160", "12", "2", "37");
+$ganjil = 0;
+$genap = 0;
+$varGenap = 0;
+$varGanjil = 0;
+
+if(count($bil)>2){
+	for ($x = 0; $x < count($bil); $x++) {
+		if ($bil[$x] % 2 == 0){ 
+    		$genap = $genap + 1;
+            $varGenap = $bil[$x];
+		}else{
+    		$ganjil = $ganjil + 1;
+            $varGanjil =  $bil[$x];
+		}
+	}
+    if($genap == 1){
+    	echo  $varGenap;
+    }
+	elseif($ganjil == 1){
+    	echo  $varGanjil;
+    }
+    else{
+    	echo  false;
+    }
+}
+?>
+
+//Soal no 3 (findNeedle)
+<?php
+$input = "red";
+$warna = array("blue","red", "red", "yellow");
+$sum = 0;
+
+	for ($x = 0; $x < count($warna); $x++) {
+		if ($warna[$x] == $input){ 
+    		$sum = $sum + 1;
+		}
+	}
+    echo $sum;
+?>
+
+//Soal no 4 (find array and set new array)
+<?php
+$input = 1;
+$angka = array(1,2,3,4);
+$rslt= array();
+
+	for ($x = 0; $x < count($angka); $x++) {
+		if ($angka[$x] != $input){ 
+    		array_push($rslt, $angka[$x]);
+		}
+	}
+    print_r($rslt);
+?>
+
